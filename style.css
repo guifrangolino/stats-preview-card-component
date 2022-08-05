@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap');
+
+* {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --very-dark-blue: hsl(233, 47%, 7%);
+    --dark-desaturated-blue: hsl(244, 38%, 16%);
+    --soft-violet: hsl(277, 64%, 61%);
+    --white: hsl(0, 0%, 100%);
+    --slightly-transparent-white-paragraph: hsla(0, 0%, 100%, 0.75);
+    --slightly-transparent-white-stat: hsla(0, 0%, 100%, 0.6);
+    --font1: 'Inter', sans-serif;
+    --font2: 'Lexend Deca', sans-serif;;
+}
+
+main {
+    color: var(--white);
+    background-color: var(--very-dark-blue);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--font1);
+}
+
+.card {
+    /* border: 1px solid red; */
+    background-color: var(--dark-desaturated-blue);
+    max-width: 1280px;
+    width: 100%;
+    border-radius: 10px;
+    display: flex;
+    overflow-y: hidden;
+    margin: 30px;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 50%;
+    padding: 0px 100px;
+}
+
+.info h1 {
+    font-size: 2.5rem;
+}
+
+.info p {
+    color: var(--slightly-transparent-white-paragraph);
+    line-height: 27px;
+    letter-spacing: 1px;
+}
+
+.info h1 strong {
+    color: var(--soft-violet);
+}
+
+.info-numbers {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding-right: 50px;
+}
+
+.numbers {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: var(--slightly-transparent-white-stat);
+}
+
+.numbers-span {
+    font-size: 0.8rem;
+    font-family: var(--font1);
+    margin-top: 7px;
+    letter-spacing: 1px;
+}
+
+.number {
+    color: var(--white);
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+img {
+    width: 50%;
+    flex-grow: 1;
+    filter: opacity(0.4) drop-shadow(0 0 0 hsl(277, 64%, 61%));
+}
+
+@media (max-width: 1020px) {
+    .info {
+        padding: 0px 70px;
+    }
+
+    .info h1 {
+        font-size: 2rem;
+    }
+
+    .info p {
+        line-height: 22px;
+        letter-spacing: 0px;
+    }
+}
+
+@media (max-width: 900px) {
+    .card {
+        max-width: 500px;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column-reverse;
+    }
+
+    .info {
+        width: auto;
+        padding: 25px 50px;
+        gap: 15px;
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+}
+
+@media (max-width: 520px) {
+    .card {
+        text-align: center;
+    }
+
+    .info {
+        gap: 20px;
+
+    }
+
+    .info h1 {
+        font-size: 1.5rem;
+    }
+
+    .info-numbers {
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0px;
+        gap: 20px;
+    }
+
+    .numbers {
+        align-items: center;
+    }
+}
